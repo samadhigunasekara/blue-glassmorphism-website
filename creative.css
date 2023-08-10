@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-items: center;
+}
+h1{
+    position:relative;
+    font-size: 9vw;
+    color:#252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform:uppercase;
+    color: transparent;
+}
+.creative{
+    background-color: transparent;
+}
+h1::before{
+    content: attr(data-text);
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    color:#2a7c95c6;
+    -webkit-text-stroke: 1px #000000;
+    border-right:4px solid transparent;
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+    animation-play-state:running;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width:0%;
+    }
+    70%,50%{
+        width:100%;
+    }
+}
